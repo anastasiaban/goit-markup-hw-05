@@ -52,31 +52,34 @@ a {
   text-transform: uppercase;
   color: var(--aacent-color);
   display: block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-frst {
   color: var(--primary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo:hover,
 .logo:focus {
   color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-frst:hover,
 .logo-frst:focus {
   color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-scnd {
   color: var(--logo-seclast-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-scnd:hover,
 .logo-scnd:focus {
   color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*------------header--------------------*/
 .page-header {
@@ -108,11 +111,21 @@ a {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--hover-focus-color);
 }
 
 .link.current {
   position: relative;
   color: var(--hover-focus-color);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link.current::after {
   content: '';
@@ -127,15 +140,6 @@ a {
 
   left: 0;
   bottom: 0;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .inf-nav {
@@ -153,12 +157,15 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .inf-nav .nav-link:hover,
 .inf-nav .nav-link:focus {
   color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*------------studio-------------------*/
@@ -370,12 +377,14 @@ a {
   justify-content: center;
   align-items: center;
   background-color: var(--aacent-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link:is(:hover, :focus) {
   background-color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {
@@ -422,6 +431,9 @@ a {
   justify-content: center;
   align-items: center;
   color: var(--logo-cust);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icon {
@@ -431,8 +443,6 @@ a {
 .customer-list-icon:is(:hover, :focus) {
   border-color: var(--hover-focus-color);
   color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*button*/
@@ -449,12 +459,12 @@ a {
   border: none;
   border-radius: 4px;
   padding: 16px 32px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
   background-color: var(--hover-focus-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-active {
   font-family: 'Roboto', sans-serif;
@@ -483,17 +493,20 @@ a {
 
   border: 1px solid #e7e9fc;
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-main:hover,
 .button-main:focus {
   color: var(--order-button-color);
   background-color: var(--aacent-color);
+  border-color: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ----------------footer---------------------------*/
 .last {
@@ -554,12 +567,14 @@ a {
   padding: 0;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--logo-dark-hover);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*portf*/
@@ -584,15 +599,6 @@ a {
   column-gap: 24px;
   row-gap: 48px;
 }
-/*
-.services-item {
- width: calc((100%-48px)/3);
-}
-.services-item:not(:nth-child(3n)) {
-  margin-right: 24px;
- }
-
-*/
 
 .services-item {
   flex-basis: calc((100% - 48px) / 3);
@@ -600,6 +606,10 @@ a {
 
 .services-link {
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .services-link:is(:hover, :focus) {
@@ -607,8 +617,6 @@ a {
   border-top: none;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .services-item-wrap {
@@ -695,12 +703,24 @@ a {
   background-color: var(--footer-text-color);
   border-radius: 50%;
   color: var(--primary-text-color);
+  cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
   padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+  fill: var(--order-button-color);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--hover-focus-color);
 }
 
 .is-hidden {
